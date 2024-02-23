@@ -85,6 +85,20 @@ You will see the JSON code, now you can press the red "Import" button at the bot
 
 ...
 
+Automatically the subflow stores the generated csv files of the sensor(s) inside the Node-RED folder.
+
+- $HOME/.node-red/log
+- $HOMEPATH/.node-red/log
+
+But there is available the "Custom Path" field, where you can add a path to customize where the generated csv files are stored.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/ce60871b-6b7b-40a7-b836-02eb7123d4a4)
+
+When you select any of the devices in the list (in case you have two or more sensors connected to the input of this subflow) the data from the csv files will be automatically loaded, and the last 20 values stored in the graphs will be displayed.
+
+The data storage is per day, in order to have a better data management.
+
+...
 
 ## Possible errors when importing:
 
