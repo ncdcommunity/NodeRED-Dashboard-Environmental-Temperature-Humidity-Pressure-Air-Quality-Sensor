@@ -142,6 +142,7 @@ So by default it is not necessary to assign a value to this property, but, if fo
 
 > [!IMPORTANT]
 > You must be careful to assign a valid route because if the subflow detects that it is not a valid route it will display an error message:
+> 
 > ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a8050a51-a877-4363-9584-9c58ffc6a227)
 > 
 > If the path you enter is correct or you leave the default path (leaving the property text field blank), then when new data arrives through the sensor at the subflow input you should be able to see that the data is being stored correctly:
