@@ -170,7 +170,7 @@ Then click on the "Open Dashboard" option:
 
 Your Dashboard will automatically open in a new window, where you can see the following:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/d2523214-a7f0-4e64-a348-fd9825710ed5)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/483b6cc7-b199-439a-aa5b-825a6dad858a)
 
 ## we have:
 
