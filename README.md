@@ -2,7 +2,7 @@
 
 This project is a sub-flow developed by **ncd.io** based on Node-RED and the Dashboard 2.0 module, which allows you to visualize the data provided by the "Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor" in an intuitive way.
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/577de3fc-9d73-484e-a48c-0dbedde0c0e1)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/60985aa2-a8bb-489a-b315-641e0d5d989a)
 
 
 ## Sub-Flow Characteristics:
@@ -20,6 +20,8 @@ Select the unit of measurement for the temperature variable:
 
 - Celsius.
 - Fahrenheit.
+
+Download from web browser (tested in Chrome) of CSV files of each selected device filtered by date.
 
 It automatically detects when a new Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor is connected, obtains its MAC address and adds it in a dropdown so you can select the device you want to display the value of its variables, this is very useful for cases where you have more than one sensor of this type.
 
@@ -111,7 +113,7 @@ The next step is to configure your ncd.io nodes (you may have already configured
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/443c388d-e41b-4c21-8b52-f7bc20956800)
 
 > [!NOTE]
-> If you are interested in knowing the complete process for the configuration of your environmental sensor inside Node-RED you can go to: 
+> If you are interested in knowing the complete process for the configuration of your environmental sensor inside Node-RED you can go to: ...
 
 Once you have the environmental sensor configured, the next step is to connect the sensor output (node) to the subflow input:
 
@@ -140,6 +142,11 @@ So by default it is not necessary to assign a value to this property, but, if fo
   
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/cfc2b2d0-4e60-42a9-970f-71742da8f703)
 
+The next step is to delploy, in order to apply the changes to our flow, this is done by clicking on the "Deploy" button located at the top right of the Node-RED flow editor:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/b525fa46-a4b4-43e2-8741-2120002a654b)
+
+
 > [!IMPORTANT]
 > You must be careful to assign a valid route because if the subflow detects that it is not a valid route it will display an error message:
 > 
@@ -153,6 +160,9 @@ So by default it is not necessary to assign a value to this property, but, if fo
 The next step is to go to your Dashboard to see the real time data coming from the sensor by clicking on the Dashboard 2.0 option in the sidebar:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8dbb7799-6386-44e2-9dec-619168dae1f5)
+
+> [!NOTE]
+> In case you have deployed and cannot see the "Dashboard 2.0" window, you should reload the current page of the web browser with the "F5" key or the "Reload this page" icon.
 
 Then click on the "Open Dashboard" option:
 
@@ -191,6 +201,43 @@ Your Dashboard will automatically open in a new window, where you can see the fo
 When you select any of the devices in the list (in case you have two or more sensors connected to the input of this subflow) the data from the local csv files will be automatically loaded, and the last 20 values stored in the graphs will be displayed.
 
 The data storage is per day, in order to have a better data management.
+
+## Download from web browser of CSV files (Tested in Chrome):
+
+You can see the box at the bottom left, where we have two fields:
+
+1.- **Date:** corresponds to a date entry.
+
+2.- **Download CSV button:** activates the download of the corresponding CSV file from the web browser.
+
+To start downloading a CSV file from the dashboard, the first thing to do is to enter a date of interest by keyboard, that is, with the current device selected (using the MAC dropdown), the date of the stored data you are interested in downloading.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/050e07f6-da79-4ace-86fb-136570eb0eb4)
+
+Format must be used: 
+
+- **mm:** for month.
+- **dd:** for day.
+- **yyyy:** for year.
+
+> [!IMPORTANT]
+> It is important to verify that the date of interest entered corresponds to a valid date, i.e. that the subflow has been storing data (that there is a csv file corresponding to that date).
+
+For example, assuming you have verified that the subflow has been storing data on the date **"February 27, 2024"**, and you need to download the CSV file generated on that date, then you would enter:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c140c524-a92c-4dd2-90d5-78f98f949e54)
+
+Then click on the **"Download CSV"** button:
+
+If the subflow finds the file on that date, you should be able to see the download start (in the download icon of the web browser):
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/138497b5-f6d2-4e10-b0bc-af2a3d4ea613)
+
+In case you enter a date of interest, which there is no CSV file generated, and press the **"Download CSV"** button, you will see the following message:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/b421b06a-a826-48be-951d-7d4bdece56f6)
+
+You should verify that a CSV file exists on that specific date.
 
 ...
 
