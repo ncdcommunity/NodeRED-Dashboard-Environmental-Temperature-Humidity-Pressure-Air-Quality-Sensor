@@ -2,7 +2,7 @@
 
 This project is a sub-flow developed by **ncd.io** based on Node-RED and the Dashboard 2.0 module, which allows you to visualize the data provided by the "Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor" in an intuitive way.
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/60985aa2-a8bb-489a-b315-641e0d5d989a)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/aef6ee05-1cc3-4218-a7ad-e22dd8b913a1)
 
 
 ## Sub-Flow Characteristics:
@@ -170,7 +170,7 @@ Then click on the "Open Dashboard" option:
 
 Your Dashboard will automatically open in a new window, where you can see the following:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/483b6cc7-b199-439a-aa5b-825a6dad858a)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8dba1323-64be-4d58-9713-baf1a4ffcb04)
 
 ## we have:
 
@@ -202,7 +202,7 @@ When you select any of the devices in the list (in case you have two or more sen
 
 The data storage is per day, in order to have a better data management.
 
-## Download from web browser of CSV files (Tested in Chrome):
+## Download CSV files from web browser (Tested in Chrome):
 
 You can see the box at the bottom left, where we have two fields:
 
@@ -210,9 +210,9 @@ You can see the box at the bottom left, where we have two fields:
 
 2.- **Download CSV button:** activates the download of the corresponding CSV file from the web browser.
 
-To start downloading a CSV file from the dashboard, the first thing to do is to enter a date of interest by keyboard, that is, with the current device selected (using the MAC dropdown), the date of the stored data you are interested in downloading.
+To download a CSV file from the dashboard, the first thing to do is to select or enter a date of interest using the date picker, i.e. with the current device selected (using the MAC drop-down), the date of the stored data you are interested in downloading.
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/050e07f6-da79-4ace-86fb-136570eb0eb4)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/0eea5a34-c461-4c6f-9e27-d18eb0bcce47)
 
 Format must be used: 
 
@@ -223,9 +223,14 @@ Format must be used:
 > [!IMPORTANT]
 > It is important to verify that the date of interest entered corresponds to a valid date, i.e. that the subflow has been storing data (that there is a csv file corresponding to that date).
 
-For example, assuming you have verified that the subflow has been storing data on the date **"February 27, 2024"**, and you need to download the CSV file generated on that date, then you would enter:
+For example, assuming you have verified that the subflow has been storing data on the date **"February 28, 2024"**, and you need to download the CSV file generated on that date, then you would enter:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c140c524-a92c-4dd2-90d5-78f98f949e54)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/2e32054f-0596-436b-8789-160bbbe24e0f)
+
+To display the date picker, click on the icon to the right of the date:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7b3ad4fd-331e-4120-a7ab-5cfc5d92ff3a)
+
 
 Then click on the **"Download CSV"** button:
 
@@ -238,6 +243,9 @@ In case you enter a date of interest, which there is no CSV file generated, and 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/b421b06a-a826-48be-951d-7d4bdece56f6)
 
 You should verify that a CSV file exists on that specific date.
+
+> [!IMPORTANT]
+> CSV file download is currently only available for the default data storage option (local in the path "./node-red").
 
 ...
 
