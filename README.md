@@ -1,13 +1,13 @@
 # Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor 
 
-This project is a sub-flow developed by **ncd.io** based on Node-RED and the Dashboard 2.0 module, which allows you to visualize the data provided by the "Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor" in an intuitive way.
+This project is a Subflow (ncd-dashboard) developed by **ncd.io** based on Node-RED and the Dashboard 2.0 module, which allows you to visualize the data provided by the Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor in an intuitive way.
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/aef6ee05-1cc3-4218-a7ad-e22dd8b913a1)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8756160e-3db4-4cee-93af-3c0b9b138720)
 
 
 ## Sub-Flow Characteristics:
 
-It allows an automatic local storage (from one or more connected devices of the same type) of the variables provided by the sensor in real time:
+#### It allows an automatic local storage (from one or more connected devices of the same type) of the variables provided by the sensor in real time:
 
 - Temperature.
 - Pressure.
@@ -16,24 +16,21 @@ It allows an automatic local storage (from one or more connected devices of the 
 - Indoor Air Quality.
 - Battery percentage.
 
-Select the unit of measurement for the temperature variable:
+#### Select the unit of measurement for the temperature variable:
 
 - Celsius.
 - Fahrenheit.
 
-Download from web browser (tested in Chrome) of CSV files of each selected device filtered by date.
+#### It is possible to view the relevant sensor data (Inspect button).
 
-It automatically detects when a new Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor is connected, obtains its MAC address and adds it in a dropdown so you can select the device you want to display the value of its variables, this is very useful for cases where you have more than one sensor of this type.
+#### Download from web browser (tested in Chrome) of CSV files of each selected device filtered by date.
+
+#### It automatically detects when a new Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor is connected, obtains its MAC address and adds it in a dropdown so you can select the device you want to display the value of its variables, this is very useful for cases where you have more than one sensor of this type.
 
 > [!IMPORTANT]
 > This subflow currently only works with type sensors ("sensor_type": 27) which corresponds to the "Environmental Temperature Humidity Pressure Air Quality Sensor":
 > 
 > https://store.ncd.io/product/industrial-iot-long-range-wireless-environmental-temperature-humidity-pressure-air-quality-sensor/
-
-It is possible to view the relevant sensor data in a "Data" tab.
-
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a9360f56-9cd3-43af-8a5b-e640d954a286)
-
 
 ## Requirements/Dependencies:
 
@@ -79,11 +76,19 @@ Source: https://dashboard.flowfuse.com/getting-started.html
 
 ## Procedure to import the Sub-flow:
 
-Copy the raw JSON file "/EnvironmentalTemperatureHumidityPressureAirQualitySensor.json" from this repository:
+> [!IMPORTANT]
+> If you already have an ncd-dashboard (subflow) installed and configured in your current project, I recommend you review the **"Working with two or more ncd-dashboards in the same Node-RED project."** section later in this post.
+
+> [!IMPORTANT]
+> If you already have a dashboard 2.0 project created in your current workspace, I recommend you review the **"Import subflow to an existent dashboard 2.0 project"** section later in this post.
+
+### Step 1 - Copy raw JSON file from Github repository
+Copy the raw JSON file "@ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor" from this repository:
 https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/tree/main
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a242e878-072a-4f08-8b18-a04ffdc138da)
 
+### Step 2 - Import nodes
 Go to Node-RED, you can add a new flow in the node editor of node-red (optional):
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/af04036e-8c5f-4902-a9cd-f55f4cead3e2)
@@ -108,12 +113,10 @@ You may also notice that the subflow has been added to the ncd.io node group.
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c5cea09d-484a-4518-ac99-a38cfbfdbe28)
 
+### Step 3 - Configure NCD.io nodes
 The next step is to configure your ncd.io nodes (you may have already configured your nodes), but it is important to remember that this procedure only works for the "environmental" type:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/443c388d-e41b-4c21-8b52-f7bc20956800)
-
-> [!NOTE]
-> If you are interested in knowing the complete process for the configuration of your environmental sensor inside Node-RED you can go to: ...
 
 Once you have the environmental sensor configured, the next step is to connect the sensor output (node) to the subflow input:
 
@@ -156,13 +159,16 @@ The next step is to delploy, in order to apply the changes to our flow, this is 
 > 
 > ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8abc68d8-4171-4e75-be32-3899bc4ee408)
 
-
+### Step 4 - Check your Dashboard
 The next step is to go to your Dashboard to see the real time data coming from the sensor by clicking on the Dashboard 2.0 option in the sidebar:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8dbb7799-6386-44e2-9dec-619168dae1f5)
 
 > [!NOTE]
-> In case you have deployed and cannot see the "Dashboard 2.0" window, you should reload the current page of the web browser with the "F5" key or the "Reload this page" icon.
+> In case you have deployed and cannot see the "Dashboard 2.0" window, you should reload the current page of the web browser with the "F5" key or the "Reload page".
+>
+> ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/31b6491b-c3db-4b0d-beb7-2158ca65c05d)
+
 
 Then click on the "Open Dashboard" option:
 
@@ -170,71 +176,103 @@ Then click on the "Open Dashboard" option:
 
 Your Dashboard will automatically open in a new window, where you can see the following:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/8dba1323-64be-4d58-9713-baf1a4ffcb04)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c14db8b8-14ab-4818-b27f-6deda022ac94)
 
-## we have:
 
-- **The dropdown for temperature unit of measure** (by default is Celcius):
+## ncd.io Dashboard Features
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/219f6212-d0fb-4f9c-9718-c6e9b6c5c648)
+### Temperature Settings
+The dropdown for temperature unit of measure (by default is Celcius):
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/e65c9587-8f5a-49b5-aa61-2f0bba9f6316)
+**Celsius:**
 
-- **The dropdown where you can select the device you want to display its information on the dashboard** (in case you have two or more sensors connected to the subflow input).
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/45e5d802-a990-47ff-b1b5-8c23bf86658e)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/bb93dedb-f652-4851-86fc-cd84ac226d0e)
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7103c9cd-bdef-44e9-bb36-14198894e48b)
+**Fahrenheit:**
 
-- **The main menu:** where you can navigate between the tabs (sensor and data):
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/cf122997-1752-4313-afe1-f0cb6d626812)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/436437c1-33ca-4621-a01b-d00504e9d5ee)
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/32e5b33a-474d-4546-a986-2837a3d37631)
+### MAC Device Selection
+The dropdown where you can select the MAC device you want to display its information on the dashboard (in case you have two or more sensors connected to the subflow input).
 
-- **NodeID:** which corresponds to an identifier that you can configure from your IoT device, and displays its value on the Dashboard.
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/127157ca-48a1-4ec5-a8a5-2522a0c159e5)
 
-- **Type of sensor:** shows the type of sensor that is showing its value (for now only allows environmental).
+> [!NOTE]
+> You will be able to see (in the dropdown) the list of the MAC address(es) of the devices connected to the subflow until you receive a new message after deploying, be patient.
+### The main menu
+You can navigate between the ui-pages (this menu allows you to navigate between two or more ncd-dashboards, in case you have configured different ncd-dashboards):
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7c8f7179-7af7-47ea-88b2-d7f3af7c9620)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/ed97c4ed-924e-4b8d-89dc-e9f3dce310af)
 
-- **Gauges and Graphs:** Where historical and real time information is displayed.
+> [!NOTE]
+> For example if you have configured an ncd-environment-dashboard and you import an ncd-uptime-dashboard, you will be able to navigate between the subflows from the main menu:
+>
+> ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7971257c-f9ec-4b6f-90db-7b79d46328a3)
+>
+> A step-by-step configuration for importing two or more ncd-dashboard subflows and accessing them from the main menu is presented later in this post.
+
+
+### NodeID 
+Corresponds to an identifier that you can configure from your IoT device, and displays its value on the Dashboard.
+
+### Type of sensor
+shows the type of sensor that is showing its value (for now only allows environmental).
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/5e14cd46-8ba7-4672-98d4-daaf46301814)
+
+### Inspect Button
+By pressing this button it is possible to access the information received from the sensor (NodeID, Firmware version, battery voltage, sensor type, MAC address, etc.), if pressed again it returns to the graphs and indicators view.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/d5c97824-0aea-440d-9c8c-08810a13e351)
+
+### Gauges and Graphs
+This is where historical and real time information is displayed.
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a5a88fad-8aa7-4616-a296-207ae5f12eaa)
 
+It is possible to connect two or more "Environment" type sensors to the input of this subflow, in order to visualize the data from a single ncd-dashboard:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/42cf6bb5-6ff7-4ce6-b5d3-3836119ce04e)
+
 When you select any of the devices in the list (in case you have two or more sensors connected to the input of this subflow) the data from the local csv files will be automatically loaded, and the last 20 values stored in the graphs will be displayed.
 
-The data storage is per day, in order to have a better data management.
+> [!NOTE]
+> The data storage is per day, in order to have a better data management.
 
-## Download CSV files from web browser (Tested in Chrome):
+## Download CSV files
+
+It is possible to download the locally stored CSV files directly from the ncd-dashboard, which contain the historical data provided by the Environmental Temperature-Humidity Pressure Air Quality Sensor(s).
 
 You can see the box at the bottom left, where we have two fields:
 
-1.- **Date:** corresponds to a date entry.
-
-2.- **Download CSV button:** activates the download of the corresponding CSV file from the web browser.
-
-To download a CSV file from the dashboard, the first thing to do is to select or enter a date of interest using the date picker, i.e. with the current device selected (using the MAC drop-down), the date of the stored data you are interested in downloading.
-
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/0eea5a34-c461-4c6f-9e27-d18eb0bcce47)
-
-Format must be used: 
+- **Date:** Corresponds to a date entry.
+- **Download CSV button:** Activates the download of the corresponding CSV file from the web browser.
+    
+Format must be used:
 
 - **mm:** for month.
 - **dd:** for day.
 - **yyyy:** for year.
 
+To download a CSV file from the dashboard, the first thing to do is to select or enter a date of interest using the date picker, i.e. (with the current device selected using the MAC drop-down) the date of the stored data you are interested in downloading.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/ed7f3e90-8cab-4a78-a154-6a099ea888c4)
+
+
 > [!IMPORTANT]
 > It is important to verify that the date of interest entered corresponds to a valid date, i.e. that the subflow has been storing data (that there is a csv file corresponding to that date).
 
-For example, assuming you have verified that the subflow has been storing data on the date **"February 28, 2024"**, and you need to download the CSV file generated on that date, then you would enter:
+For example, assuming you have verified that the subflow has been storing data on the date **"March 5, 2024"**, and you need to download the CSV file generated on that date, then you would enter:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/2e32054f-0596-436b-8789-160bbbe24e0f)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/48d2f584-16f1-4b25-a1a0-810e172e205a)
 
 To display the date picker, click on the icon to the right of the date:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7b3ad4fd-331e-4120-a7ab-5cfc5d92ff3a)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/4115c675-01c4-43bf-97c6-0849bb0916de)
 
-
-Then click on the **"Download CSV"** button:
-
-If the subflow finds the file on that date, you should be able to see the download start (in the download icon of the web browser):
+Then click on the “Download CSV” button. If the subflow finds the file on that date, you should be able to see the download start (in the download icon of the web browser):
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/138497b5-f6d2-4e10-b0bc-af2a3d4ea613)
 
@@ -247,7 +285,86 @@ You should verify that a CSV file exists on that specific date.
 > [!IMPORTANT]
 > CSV file download is currently only available for the default data storage option (local in the path "./node-red").
 
-...
+## Working with two or more ncd-dashboards in the same Node-RED project
+
+This instructions refers to the scenario where you have previously installed and configured an ncd-dashboard (subflow) and you want to import another ncd-dashboard (subflow) to the same project.
+
+The procedure is the same as mentioned above, with the simple difference that as soon as you press the import button in the "Import nodes" window you will see the following message at the top of our Node-RED flow editor:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7f89e293-b246-4143-9e91-25bf4f553beb)
+
+This indicates that you are importing a subflow that contains one or more nodes that already exist in your current project (workspace). Specifically it refers to the configuration node **"ncd-ui-base"** which represents the base configuration of all our ncd-dashboards, simply click on the "Import copy" option. This shows us the detail of the elements that were imported in our project.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/cfaeb98e-238e-4720-be0e-92835271887b)
+
+If everything is correct, the next step is to deploy in order to apply and execute the changes in our project, using the "Deploy" button:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/e15d0d20-7c89-483f-933e-884d76ab6885)
+
+Now, if you go to the "Dashboard 2.0" tab and click on "Open Dashboard" or simply refresh the dashboard browser tab, you will see in the main dashboard menu the new imported ncd dashboard:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/b5c5e88f-7480-44da-9da2-21b478a7fca0) View from ncd-environment-dashboard            ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/2d0a3bb2-7437-42c8-b96a-1afee9ffbf66) View from ncd-uptime-dashboard
+
+## Import subflow to an existent dashboard 2.0 project.
+
+This procedure refers to the scenario where you already have a dashboard 2.0 configured and you want to import an ncd-dashboard within the same Node-RED project.
+
+For example, if you already have a dashboad 2.0 configured with some elements, in the dashboard you would have something like the following:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/44cc9048-0c76-4726-8158-e3c5983c5ac6)
+
+To import an ncd-dashboard to your existing project you use the same steps mentioned above; copy the JSON file from the GitHub repository, use the import window (or Key shortcut Ctrl-i), paste the JSON and click on import, the imported elements will be shown at the top, but if you deploy inside the dashboard 2.0 you will have the following message:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a6a314e7-177f-4480-8faa-25d628438adb)
+
+To solve this you must return to the Node-RED flow editor, go to the "dashboard 2.0" tab and inside "Layout" you will be able to see something like the following:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/f16d51c9-dc7f-4f71-9814-92830d8fb173)
+
+You can identify the ui-pages of the ncd-dashboard by the fact that they are preceded by "ncd".
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/d9738a8d-edb4-4e55-b259-d7be6323e2b2)
+
+Next to the "Your Page Name" identifier, if you hover the cursor you will see the "Edit" button, click on it:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/96db89b5-0df1-4797-8bc1-318cb6434eac)
+
+This opens the page configuration window, in the UI property you will click on the "Edit" (pencil icon).
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/d35d4b29-dc6c-44d9-a145-553e16685203)
+
+Now the configuration window of the "ui-base" configuration node opens, you should click on the "Delete" button (located in the upper left part of the window):
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/b02951c9-0efb-40b1-94d8-158cdfb4f975)
+
+Automatically it returns to the ui-page window, and it shows us the box of the property "UI" with the outline in red color:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/f09b81ef-2bbc-49b8-9201-3408307d4395)
+
+Click on the arrow and then select the property "ncd-ui-base[/dashboard]":
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c6dcd6df-0dad-49e4-a1c6-805807e500d7)
+
+Finally click on the "Update" button at the top right of the window:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/be030371-4b1a-4098-b86b-6418cec02a77)
+
+> [!NOTE]
+> this same procedure must be done if you have two or more pages previously configured in dashboard 2.0.
+
+Now click on deploy button to apply the changes made to the project:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/93da7f6c-d76d-4770-b6b3-300d3025810d)
+
+Go to the "Dashboard 2.0" tab and click on the "Open Dashboard" button:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/893c6c00-417a-461f-85f0-31ffc6b3e278)
+
+You will notice that the identifier of the added ncd-dashboard has been added to the main menu of the dashboard 2.0:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/e4f76e68-a856-4a83-95f1-e043a4179ae7)
+
+You can now navigate between your dashboard and the ncd-dashboard using the dashboard 2.0 navigation menu.
 
 ## Possible errors when importing:
 
@@ -255,9 +372,7 @@ If you import the flow without having previously installed Dashboard 2, you will
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/1607a7b0-0119-43cb-8920-48de92e3b968)
 
-So you must delete the subflow and install the module "@flowfuse/node-red-dashboard" as mentioned at the beginning, and repeat the process.
-
-To delete the subflow you must double-click on the subflow in the Node-RED node editor to open its properties:
+So you must delete the subflow and install the module "@flowfuse/node-red-dashboard" as mentioned at the beginning, and repeat the process. To delete the subflow you must double-click on the subflow in the Node-RED node editor to open its properties:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/bed47734-0ca7-4dd6-9950-975e31836ccc)
 
@@ -265,7 +380,16 @@ Then click on the "Delete" button at the top of the window:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c143c969-e92e-445a-a42b-f436d777a637)
 
-By. ncd.io
+You must also delete the subflow node from the node palette in the "NCD" or "Sublows" group, double click on the node.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/bc21dc96-8010-4028-92d8-da6b2e7b259b)
+
+This opens the subflow window, at the top click on the "delete subflow" button:
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c4e499e5-c504-461a-b4a5-643b785b3a9f)
+
+
+By. Eduardo from **ncd.io** team.
 
 
 
