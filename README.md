@@ -23,9 +23,10 @@ This project is a Subflow (ncd-dashboard) developed by **ncd.io** based on Node-
 
 #### It is possible to view the relevant sensor data (Inspect button).
 
-#### Download from web browser (tested in Chrome) of CSV files of each selected device filtered by date.
+#### Download from web browser of CSV files of each selected device filtered by date.
 
-#### It automatically detects when a new Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor is connected, obtains its MAC address and adds it in a dropdown so you can select the device you want to display the value of its variables, this is very useful for cases where you have more than one sensor of this type.
+#### MAC detection: 
+It automatically detects when a new Industrial IoT Long Range Wireless Environmental Temperature Humidity Pressure Air Quality Sensor is connected, obtains its MAC address and adds it in a dropdown so you can select the device you want to display the value of its variables, this is very useful for cases where you have more than one sensor of this type.
 
 > [!IMPORTANT]
 > This subflow currently only works with type sensors ("sensor_type": 27) which corresponds to the "Environmental Temperature Humidity Pressure Air Quality Sensor":
