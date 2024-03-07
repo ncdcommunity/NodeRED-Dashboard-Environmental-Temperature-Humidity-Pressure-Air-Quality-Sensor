@@ -172,11 +172,12 @@ The next step is to go to your Dashboard to see the real time data coming from t
 
 Then click on the "Open Dashboard" option:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/9d34c5c8-814d-4ea2-aa74-9c1b05da7f61)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/a6450911-b762-4fdc-b78d-2c2adef92215)
 
 Your Dashboard will automatically open in a new window, where you can see the following:
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c14db8b8-14ab-4818-b27f-6deda022ac94)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/7db3e797-90e6-4b2c-b70e-327e143abe01)
+
 
 
 ## ncd.io Dashboard Features
@@ -295,7 +296,8 @@ The procedure is the same as mentioned above, with the simple difference that as
 
 This indicates that you are importing a subflow that contains one or more nodes that already exist in your current project (workspace). Specifically it refers to the configuration node **"ncd-ui-base"** which represents the base configuration of all our ncd-dashboards, simply click on the "Import copy" option. This shows us the detail of the elements that were imported in our project.
 
-![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/cfaeb98e-238e-4720-be0e-92835271887b)
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/89ab4515-7bd3-47cb-97ed-513b908ba090)
+
 
 If everything is correct, the next step is to deploy in order to apply and execute the changes in our project, using the "Deploy" button:
 
