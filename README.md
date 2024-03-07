@@ -366,7 +366,9 @@ You will notice that the identifier of the added ncd-dashboard has been added to
 
 You can now navigate between your dashboard and the ncd-dashboard using the dashboard 2.0 navigation menu.
 
-## Possible errors when importing:
+## Possible drawbacks during subflow import
+
+### 1.- Import subflow without dependencies installed
 
 If you import the flow without having previously installed Dashboard 2, you will get a message like the following:
 
@@ -388,6 +390,24 @@ This opens the subflow window, at the top click on the "delete subflow" button:
 
 ![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/c4e499e5-c504-461a-b4a5-643b785b3a9f)
 
+### 2.- Import the same subflow twice / delete subflow.
+
+In case by mistake or by some procedure you have imported twice the same subflow, or you simply want to remove an ncd-dashboard subflow from the nodes palette, you must follow this quite simple procedure.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/ec5a8900-b033-4e8f-afa0-c8d9a22a5568)
+
+1) Double click on the subflow node you wish to delete, the ncd-dashboard subflows are located in the node palette within the NCD group.
+2) Once the "Edit subflow template" tab opens at the top, click on the "delete subflow" button.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/cbafc8ea-5e61-49dc-ade9-ea7277154e56)
+
+This completely removes the subflow, as well as the associated configuration nodes, you will notice that it no longer appears in the nodes palette.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/0f033785-7678-4bf4-9f89-8fdb9635d659)
+
+Do not forget to deploy in order to save and apply the changes made to your project.
+
+![image](https://github.com/ncdcommunity/NodeRED-Dashboard-Environmental-Temperature-Humidity-Pressure-Air-Quality-Sensor/assets/159818736/3b79a41f-e8a3-4a4a-a93e-730fa767159a)
 
 By. Eduardo from **ncd.io** team.
 
